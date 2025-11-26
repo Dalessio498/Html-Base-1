@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX - 26/11</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+
+        background-color: rgb(70, 65, 65);
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        /*row, row-reverse, column, column-reverse*/
+    
+        /*space-between, */
+        /* height: 100vh; | Para flex-direction: column; */
+        height: 100vh;
+        align-items: center;
+      
+
+     
+    }
+
+    .cont{
+        display: flex;
+        flex-direction: row;
+        height: 500px;
+        width: 100%;
+    }
+
+    .box:hover {
+        scale: 1.05
+    }
+
+
+
+    .box {
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-family: system-ui;
+        font-size: 20px;
+        color: white;
+        box-shadow: 0px 2px 4px rgba(26, 21, 21, 0.575);
+        transition: 1s linear;
+        text-align: center;
+
+    }
+
+    #box1 {
+        background-color: rgb(0, 211, 35);
+        width: 100%;
+        height: 150px;
+    }
+
+    #box2 {
+        background-color: rgb(231, 189, 0);
+        height: 500px;
+        width: 50%;
+    }
+
+
+    #box3 {
+        background-color: rgb(0, 89, 255);
+        height: 500px;
+        width: 50%;
+    }
+
+    #box4 {
+        background-color: rgb(0, 211, 35);
+        width: 100%;
+        height: 150px;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div class="head" id="box1">Box 1</div>
+        <div class="cont">
+            <div class="box" id="box2">Box 2</div>
+            <div class="box" id="box3">Box 3</div>
+        </div>
+        <div class="foot" id="box4">Box 4</div>
+    </div>
+</body>
+
+</html>

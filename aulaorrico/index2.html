@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX - 26/11</title>
+</head>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+    body {
+       padding: 0;
+       margin: 0;
+        background-color: rgb(0, 0, 0);
+    }
+
+    #container{
+        background-color: rgb(0, 0, 0);
+        padding: 16px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+        columns: 20px;
+        flex-wrap: wrap;
+    }
+
+    .cont{
+        display: flex;
+        display: inline;
+    }
+
+    .box{
+      font-size: 30px;
+      height: 100px;
+      padding: 5px;
+      margin: 5px;
+      border: 2px solid rgb(255, 255, 255);
+      transition: 0.6s ease;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+    }
+    .box:hover{
+        border-radius: 30px;
+        scale: 1.05;
+    }
+
+    #box1{
+        background-color: rgb(0, 0, 0);
+        order: 0;
+        flex-grow: 1;
+         align-self: flex-start; /*Sobreescreve o align-ite,s*/
+
+        /* uni grow shrink basis */
+    }
+
+     #box1:hover{
+        border-radius: 30px;
+        scale: 1.05;
+        border: 2px solid red;
+        color: red;
+    }
+
+    #box2{
+        background-color: rgb(0, 0, 0);
+        order: 2;
+        flex: 2 1 auto;
+        align-self: flex-center; /*Sobreescreve o align-ite,s*/
+    }
+
+    #box2:hover{
+        border-radius: 30px;
+        scale: 1.05;
+        border: 2px solid blue;
+        color: blue;
+    }
+
+
+    #box3{
+        background-color: rgb(0, 0, 0);
+        order: 3;
+        flex-grow: 1;
+        flex-shrink: 2;
+        align-self: flex-end; /*Sobreescreve o align-ite,s*/
+    }
+
+     #box3:hover{
+        border-radius: 30px;
+        scale: 1.05;
+        border: 2px solid rgb(0, 255, 34);
+        color: rgb(21, 255, 0);
+    }
+
+
+</style>
+<body>
+    <div id="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+    </div>
+</body>
+</html>
